@@ -1,0 +1,34 @@
+.quest-board-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.gap-2 { gap: var(--spacing-sm); }
+
+.filter-btn {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-purple);
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background: rgba(122, 59, 214, 0.3);
+}
+
+.filter-btn.active {
+  background: var(--gradient-gold);
+  color: var(--bg-darker);
+  border-color: var(--primary-gold);
+  font-weight: bold;
+}
+
+.quest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-xl);
+}

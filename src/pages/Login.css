@@ -1,0 +1,57 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, var(--bg-dark), #000);
+  background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(15, 10, 24, 0.85);
+  margin: -20px; /* Offset global padding if needed */
+}
+
+.login-box {
+  width: 450px;
+  max-width: 90%;
+  padding: var(--spacing-2xl);
+  border: 2px solid var(--primary-gold);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+}
+
+.login-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.error-message {
+  background: rgba(255, 60, 60, 0.2);
+  border: 1px solid #ff3c3c;
+  color: #ff3c3c;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  font-size: 14px;
+}
+
+select.game-input {
+  appearance: none;
+  background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+select.game-input option {
+  background-color: var(--bg-darker);
+  color: var(--text-main);
+}
+
+.toggle-mode-btn {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.toggle-mode-btn:hover {
+  color: var(--primary-gold);
+}

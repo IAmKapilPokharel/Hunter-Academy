@@ -1,0 +1,93 @@
+.tournament-container {
+  padding: var(--spacing-lg) 0;
+}
+
+.tournament-bracket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-2xl);
+  min-height: 500px;
+  background: radial-gradient(circle at center, rgba(122, 59, 214, 0.1), transparent), var(--bg-panel);
+}
+
+.bracket-round {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 400px;
+  width: 300px;
+}
+
+.matchup {
+  background: var(--bg-darker);
+  border: 1px solid var(--border-purple);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.competitor {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.competitor.winner {
+  background: rgba(212, 175, 55, 0.1);
+  border-left: 3px solid var(--primary-gold);
+}
+
+.competitor.current-player {
+  border-left: 3px solid var(--secondary-purple);
+  background: rgba(122, 59, 214, 0.1);
+}
+
+.score {
+  margin-left: auto;
+  font-weight: bold;
+  color: var(--primary-gold);
+}
+
+.bracket-connector {
+  position: relative;
+  width: 100px;
+  height: 250px;
+}
+
+.bracket-connector .line {
+  position: absolute;
+  background: var(--border-gold);
+  box-shadow: 0 0 5px var(--primary-gold);
+}
+
+.top-line { top: 0; left: 0; width: 50px; height: 2px; }
+.bottom-line { bottom: 0; left: 0; width: 50px; height: 2px; }
+.center-line { top: 0; left: 50px; width: 2px; height: 100%; }
+
+.bracket-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 52px;
+  width: 48px;
+  height: 2px;
+  background: var(--border-gold);
+  box-shadow: 0 0 5px var(--primary-gold);
+}
+
+.final-matchup {
+  border: 2px solid var(--primary-gold);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.versus {
+  text-align: center;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  padding: var(--spacing-xs) 0;
+  border-top: 1px solid var(--border-purple);
+  border-bottom: 1px solid var(--border-purple);
+}

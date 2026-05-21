@@ -1,0 +1,46 @@
+:root {
+  /* Dark Fantasy Color Palette */
+  --bg-dark: #0f0a18;
+  --bg-darker: #08050d;
+  --bg-panel: rgba(25, 18, 38, 0.7);
+  --bg-panel-hover: rgba(35, 25, 50, 0.8);
+  
+  --primary-gold: #d4af37;
+  --primary-gold-glow: rgba(212, 175, 55, 0.5);
+  --secondary-purple: #7a3bd6;
+  --secondary-purple-glow: rgba(122, 59, 214, 0.5);
+  
+  --text-main: #e0d8ea;
+  --text-muted: #9e8fb5;
+  --text-gold: #f2db83;
+  
+  --border-gold: rgba(212, 175, 55, 0.4);
+  --border-purple: rgba(122, 59, 214, 0.4);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, #f2db83, #d4af37, #997a00);
+  --gradient-purple: linear-gradient(135deg, #9b51e0, #7a3bd6, #4a154b);
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Shadows & Glassmorphism */
+  --shadow-glow-gold: 0 0 15px var(--primary-gold-glow);
+  --shadow-glow-purple: 0 0 15px var(--secondary-purple-glow);
+  --glass-backdrop: blur(12px);
+  
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+}
