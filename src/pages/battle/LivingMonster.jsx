@@ -61,7 +61,16 @@ const LivingMonster = ({ questTitle, animState, attackIndex = 1, isLowHp }) => {
     }
     
     if (animState === 'dashing') {
-      return `state-attack-${attackIndex}`;
+      // Map different attack indices to specific attack animations
+      const attackMap = {
+        1: 'state-attack-1',  // Dragon Breath
+        2: 'state-attack-2',  // Claw Slash
+        3: 'state-attack-3',  // Bite Attack
+        4: 'state-attack-4',  // Tail Swing
+        5: 'state-attack-5',  // Jump Attack
+        6: 'state-attack-6'   // Spell Cast
+      };
+      return attackMap[attackIndex] || 'state-attack-1';
     }
 
     const animClasses = {
@@ -98,7 +107,7 @@ const LivingMonster = ({ questTitle, animState, attackIndex = 1, isLowHp }) => {
             </g>
 
             {/* Dragon tail sweeping */}
-            <path className="tail-wag" d="M 70,140 C 40,165 10,150 15,130 C 20,120 45,135 70,140" fill={underbelly} />
+            <path className="tail-wag dragon-tail" d="M 70,140 C 40,165 10,150 15,130 C 20,120 45,135 70,140" fill={underbelly} />
 
             {/* Quadruped heavy dragon legs */}
             <path className="limb-joint-left" d="M 75,135 L 65,178" stroke={baseColor} strokeWidth="15" strokeLinecap="round" />
@@ -317,7 +326,16 @@ const LivingMonster = ({ questTitle, animState, attackIndex = 1, isLowHp }) => {
       </div>
 
       {/* 2. SVG Vector Canvas */}
-      <svg className="living-svg" viewBox="0 0 200 200">
+      <svg 
+        className={`living-svg ${
+          element === 'fire' ? 'fire-flicker' : 
+          element === 'ice' ? 'ice-shimmer' : 
+          element === 'thunder' ? 'thunder-spark' : 
+          element === 'void' ? 'void-vortex' : 
+          'elemental-pulse-glow'
+        }`} 
+        viewBox="0 0 200 200"
+      >
         {renderMonsterSVG()}
       </svg>
     </div>

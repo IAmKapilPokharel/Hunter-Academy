@@ -18,7 +18,14 @@ const io = new Server(server, {
 const PORT = process.env.PORT || 3001;
 const JWT_SECRET = 'super-secret-hunter-academy-key-2026';
 
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Initialize SQLite Database
